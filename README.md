@@ -32,3 +32,26 @@ The results are collected in an excel file which we used to graph out results to
 between varying the variables and the hit ratio. In other words, to test the cache performance.
 We included screenshots of the graphs we obtained from the excel file and recorded our
 observations and conclusions from each graph.
+
+
+Data Structure I used in this project:
+
+In this project, we used many data structures to create the simulator. We started off by creating
+the fixed parameters which were the cache size and the DRAM size, we then added the global
+parameters which were the number of ways, blocks, index bits as well as the word offset.
+We also created a structure that contains the valid bit and the tag after that we represented the
+cache as a 2D dynamic array of blocks. With this we completed all the parts that make up the
+cache to create the required set associative cache that we are going to conduct our tests on.
+The set associative cache simulator function receives an address from the random memory
+generator and identifies the index and tag which we then use to determine whether or not there
+is a hit or a miss. The function also includes a counter that keeps in count the space occupied
+by each set, in other words the counter is used to check if the set is full. We then created a for
+loop that goes through each number of ways to look for the miss or hit in the sets. To do so, we
+created a loop that goes through all the blocks in the set and then an if function that checks the
+boolean valid bit (true meaning its valid), we then add to the counter if the condition is true
+meaning that the address is occupied in the respective set, after that we added another if
+statement that compares the tags to see if they match indicating that it is a hit. After that we had
+to keep in mind the issue of a capacity conflict, so we created an if statement that chooses a
+random cell and replaces it if the set is full due to capacity conflict, and if the set still has
+remaining capacity the simulator fills in the address and returns a miss. This completes the
+simulator section of the code.
