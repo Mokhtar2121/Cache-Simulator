@@ -1,4 +1,4 @@
-Introduction about Cache:
+# Introduction about Cache:
 
 Cache is a copy of a subset of main memory that stores the recently visited data. Cache
 memory (SRAM) is used to speed up the application performance and increase its efficiency as
@@ -34,7 +34,7 @@ We included screenshots of the graphs we obtained from the excel file and record
 observations and conclusions from each graph.
 
 
-Data Structure I used in this project:
+# Data Structure I used in this project:
 
 In this project, we used many data structures to create the simulator. We started off by creating
 the fixed parameters which were the cache size and the DRAM size, we then added the global
